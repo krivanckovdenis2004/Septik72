@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Монтаж септиков под ключ в Тюмени — ЖБИ и металлические</title>
+
+  <meta name="description" content="Монтаж септиков под ключ в Тюмени и Тюменской области. Септики из ЖБИ и металла. Работа по договору, гарантия, выезд и расчет бесплатно.">
+  <meta name="keywords" content="монтаж септиков Тюмень, септик под ключ, септики ЖБИ, металлические септики, установка септика">
+  <meta name="robots" content="index, follow">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Септики под ключ в Тюмени</h1>
+    <p>Монтаж ЖБИ и металлических септиков с гарантией и фиксированной ценой</p>
+    <a href="#contact" class="hero-btn">Рассчитать стоимость</a>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <h2>Почему нам доверяют</h2>
+
+  <div class="trust-grid">
+    <div class="trust-item">📄 Работа по договору</div>
+    <div class="trust-item">🛠 Опыт более 10 лет</div>
+    <div class="trust-item">💰 Фиксированная цена</div>
+    <div class="trust-item">🚚 Своя техника и бригада</div>
+    <div class="trust-item">✅ Гарантия на работы</div>
+  </div>
+</section>
+
+<!-- PRICES -->
+<section class="prices">
+  <h2>Цены на монтаж септиков</h2>
+
+  <div class="prices-grid">
+
+    <!-- ЖБИ -->
+    <article class="price-box recommended">
+      <div class="badge">Рекомендуем</div>
+
+      <h3>Септики из ЖБИ</h3>
+
+      <div class="price">
+        от <span>75 000 ₽</span>
+      </div>
+
+      <p class="note">
+        Монтаж под ключ. Подбор объёма под дом, участок и количество проживающих.
+      </p>
+
+      <button class="open-form">Оставить заявку</button>
+    </article>
+
+    <!-- Металлические -->
+    <article class="price-box">
+      <h3>Металлические септики</h3>
+
+      <p class="note">
+        • 5 м³ — <b>115 000 ₽</b><br>
+        • 8 м³ — <b>130 000 ₽</b><br>
+        • 10 м³ — <b>140 000 ₽</b>
+      </p>
+
+      <p class="note">
+        Заводское изготовление. Подходит для высокого уровня грунтовых вод.
+      </p>
+
+      <button class="open-form">Оставить заявку</button>
+    </article>
+
+  </div>
+
+  <p class="note" style="max-width:700px;margin:30px auto 0;text-align:center;">
+    💥 Цена актуальна до 30 км от города. За пределами — по договорённости.<br>
+    📄 Работаем по договору, предоплата 50%.
+  </p>
+</section>
+
+<!-- WORKS -->
+<section class="works">
+  <h2>Наши работы</h2>
+
+  <div class="works-grid">
+    <div class="work-item">
+      <img src="img/work1.jpg" alt="Монтаж септика под ключ в Тюмени">
+    </div>
+    <div class="work-item">
+      <img src="img/work2.jpg" alt="Установка септика из ЖБИ">
+    </div>
+    <div class="work-item">
+      <img src="img/work3.jpg" alt="Металлический септик для частного дома">
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="contact">
+  <h2>Оставьте заявку</h2>
+
+  <p class="form-subtitle">
+    Мы подберём оптимальный вариант и рассчитаем стоимость под ваш участок
+  </p>
+
+  <form id="telegram-form">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <input type="tel" name="phone" placeholder="Телефон" required>
+    <button type="submit">Отправить заявку</button>
+  </form>
+
+  <p class="form-note">Мы перезвоним в течение 15 минут</p>
+  <p class="form-note">🔒 Данные не передаём третьим лицам</p>
+</section>
+
+<!-- SEO TEXT -->
+<section class="seo-text">
+  <p>
+    Выполняем монтаж септиков под ключ в Тюмени и Тюменской области.
+    Устанавливаем септики из ЖБИ и металлические конструкции для частных домов,
+    дач и коттеджей. Работаем по договору и предоставляем гарантию.
+  </p>
+
+  <p>
+    Подбор септика осуществляется с учётом количества проживающих,
+    типа грунта и уровня грунтовых вод. Возможна установка на сложных участках.
+  </p>
+</section>
+
+<!-- TELEGRAM SCRIPT -->
+<script>
+const TOKEN = "8217955949:AAE9XgdlE_U-KxLanZuaT-fwC-e8g9Xs1pc";
+const CHAT_ID = "8358718651";
+
+document.getElementById("orderForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+
+  const text =
+`📩 Новая заявка с сайта
+👤 Имя: ${name}
+📞 Телефон: ${phone}`;
+
+  fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      chat_id: CHAT_ID,
+      text: text
+    })
+  }).then(() => {
+    alert("Заявка отправлена! Мы свяжемся с вами.");
+    document.getElementById("orderForm").reset();
+  });
+});
+</script>
+
+</body>
+</html>
