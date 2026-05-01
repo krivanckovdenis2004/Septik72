@@ -140,7 +140,7 @@ document.getElementById('telegram-form').addEventListener('submit', function(e) 
   e.preventDefault();
 
   const name = this.querySelector('input[type="text"]').value.trim();
-c const phone = this.querySelector('input[type="tel"]').value.trim();
+  const phone = this.querySelector('input[type="tel"]').value.trim();
 
   if (!name || !phone) {
     alert('Заполните имя и телефон');
