@@ -1,4 +1,4 @@
-const TOKEN = "8217955949:AAE9XgdlE_U-KxLanZuaT-fwC-e8g9Xs1pc";
+const TOKEN = "8217955949:AAE3m9vu7XGxKB_yw1fLc_vB9Xs-mlqHQGA";
 const CHAT_ID = "8358718651";
 
 document.getElementById("contactForm").addEventListener("submit", function(e) {
